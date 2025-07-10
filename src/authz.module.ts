@@ -1,4 +1,5 @@
 import { Module, DynamicModule, Global } from '@nestjs/common';
+import { Reflector } from '@nestjs/core';
 import * as casbin from 'casbin';
 
 import { AuthZModuleOptions } from './interfaces';
@@ -62,7 +63,8 @@ export class AuthZModule {
         AuthZGuard,
         AuthZRBACService,
         AuthZManagementService,
-        AuthZService
+        AuthZService,
+        Reflector
       ],
       imports: importsModule,
       exports: [
